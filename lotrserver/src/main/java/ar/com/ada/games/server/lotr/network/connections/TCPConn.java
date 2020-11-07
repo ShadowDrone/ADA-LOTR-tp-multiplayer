@@ -63,14 +63,7 @@ public class TCPConn implements Runnable{
 					case GET_ID:
 						oos.writeLong(this.client.clientId);
 						break;
-					case GET_MAP:
-						try {
-							String data = Replicator.marshall(main.getMap());
-							oos.writeObject(data);
-						} catch (JAXBException e) {
-							e.printStackTrace();
-						}
-						break;
+					
 					case SEND_MAIN_CHARACTER:
 						main.updatePlayer(sm.characterData);
 						break;

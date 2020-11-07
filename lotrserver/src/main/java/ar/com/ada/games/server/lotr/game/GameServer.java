@@ -69,6 +69,7 @@ public class GameServer {
         SERVER_PORT_TCP = tcpPort;
         gameState = new GameState();
         udpSend = new UdpConnectionsSend();
+        //thread-safe
         players = new CopyOnWriteArrayList<PlayerController>();
 
         gameLoop = new GameLoop(this);

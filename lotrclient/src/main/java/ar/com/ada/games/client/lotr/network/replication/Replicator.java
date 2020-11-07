@@ -14,7 +14,6 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import ar.com.ada.games.client.lotr.game.GameState;
-import ar.com.ada.games.client.lotr.models.Box;
 import ar.com.ada.games.client.lotr.network.replication.*;
 
 

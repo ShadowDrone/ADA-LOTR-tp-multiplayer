@@ -14,7 +14,6 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import ar.com.ada.games.server.lotr.game.GameState;
-import ar.com.ada.games.server.lotr.models.Box;
 import ar.com.ada.games.server.lotr.network.replication.*;
 
 
@@ -29,18 +28,7 @@ public class Replicator {
 		
 		return (ServerMessage) unmarshaller.unmarshal(sr);
 	}
-	
-	
-	public static String marshall(WrapperList wl) throws JAXBException {
-		JAXBContext jc = JAXBContext.newInstance(WrapperList.class);
-        Marshaller marshaller = jc.createMarshaller();
-        marshaller.setProperty(Marshaller.JAXB_ENCODING, "utf-8");
-        
-        StringWriter sw = new StringWriter();
-        marshaller.marshal(wl, sw);
-        
-		return sw.toString();
-	}
+
 
 	public static String marshall(GameState gameState) throws JAXBException {
 		JAXBContext jc = JAXBContext.newInstance(GameState.class);
