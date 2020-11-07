@@ -1,10 +1,9 @@
 package ar.com.ada.games.server.lotr;
 
 
-import ar.com.ada.games.server.lotr.Helper.WrapperList;
+
 import ar.com.ada.games.server.lotr.game.GameServer;
-import ar.com.ada.games.server.lotr.models.Box;
-import ar.com.ada.games.server.lotr.models.CharacterObj;
+
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
