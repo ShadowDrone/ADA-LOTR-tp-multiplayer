@@ -11,9 +11,6 @@ import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 
-import ar.com.ada.games.client.lotr.models.Box;
-import ar.com.ada.games.client.lotr.models.Bullet;
-import ar.com.ada.games.client.lotr.models.CharacterObj;
 
 /**
  * 

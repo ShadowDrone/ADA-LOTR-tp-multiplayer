@@ -13,7 +13,6 @@ import javax.xml.bind.JAXBException;
 
 import ar.com.ada.games.client.lotr.GameClient;
 import ar.com.ada.games.client.lotr.game.GameState;
-import ar.com.ada.games.client.lotr.models.Box;
 import ar.com.ada.games.client.lotr.network.replication.Replicator;
 
 /**
