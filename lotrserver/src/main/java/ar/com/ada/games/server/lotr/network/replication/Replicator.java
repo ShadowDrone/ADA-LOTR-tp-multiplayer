@@ -64,23 +64,4 @@ public class Replicator {
 		return sw.toString();
 	}
 	
-	@XmlRootElement
-	@XmlAccessorType(XmlAccessType.FIELD)
-	public static class WrapperList{
-		List<Box> realList;
-		
-		public WrapperList(){
-			realList = new ArrayList<Box>();
-		}
-		public void clear() {
-			realList.clear();			
-		}
-
-		public void addAll(List<Box> update) {
-			realList.addAll(update);
-		}
-		public void add(Box box) {
-			realList.add(box);
-		}
-	}
 }

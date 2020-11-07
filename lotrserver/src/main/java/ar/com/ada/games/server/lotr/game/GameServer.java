@@ -35,7 +35,6 @@ import ar.com.ada.games.server.lotr.game.GameState;
 import ar.com.ada.games.server.lotr.network.connections.Client;
 import ar.com.ada.games.server.lotr.network.connections.TCPConn;
 import ar.com.ada.games.server.lotr.network.replication.PlayerReplicationInfo;
-import ar.com.ada.games.server.lotr.network.replication.Replicator.WrapperList;
 
 public class GameServer {
 
@@ -58,8 +57,6 @@ public class GameServer {
     //private CopyOnWriteArrayList<IpPort> activeClients;
     public CopyOnWriteArrayList<PlayerController> players;
 
-    private WrapperList tiles;
-
     private static final long MIN_PLAYERS = 2; //2
 
     public GameState gameState;
@@ -70,7 +67,6 @@ public class GameServer {
     public GameServer(int tcpPort) {
 
         SERVER_PORT_TCP = tcpPort;
-        tiles = new WrapperList();
         gameState = new GameState();
         udpSend = new UdpConnectionsSend();
         players = new CopyOnWriteArrayList<PlayerController>();
@@ -182,10 +178,6 @@ public class GameServer {
 
         this.players.remove(this.players.stream().filter(p -> p.playerId == id).findFirst().get());
 
-    }
-
-    public WrapperList getMap() {
-        return tiles;
     }
 
     protected void sendGamePlay() {
